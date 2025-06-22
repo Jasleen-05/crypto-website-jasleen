@@ -41,8 +41,12 @@ const Navigation = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="text-2xl font-light tracking-tight text-white">
-              Lunexa
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/0e93fcb8-c243-4914-b916-6bcffb52317d.png" 
+                alt="Lunexa" 
+                className="h-8 w-auto"
+              />
             </div>
             
             {/* Desktop Navigation */}

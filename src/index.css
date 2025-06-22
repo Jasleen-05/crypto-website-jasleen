@@ -56,9 +56,12 @@
 
   body {
     @apply bg-background text-foreground font-inter;
-    background: radial-gradient(ellipse at top, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at bottom, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                hsl(var(--background));
+    background: 
+      radial-gradient(ellipse at 20% 80%, rgba(120, 50, 200, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 40% 40%, rgba(88, 28, 135, 0.08) 0%, transparent 50%),
+      linear-gradient(135deg, #0c0a1a 0%, #1a0d2e 100%);
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -72,7 +75,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/5 backdrop-blur border border-white/10 rounded-2xl;
+    @apply bg-white/5 backdrop-blur border border-white/10 rounded-2xl transition-all duration-300 hover:scale-105 hover:bg-white/8;
   }
 
   .neuro-button {
@@ -104,5 +107,17 @@
     opacity: 1;
     filter: blur(0px);
     transform: translateY(0);
+  }
+
+  .feature-card {
+    @apply glass-card p-8 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20;
+  }
+
+  .testimonial-card {
+    @apply glass-card transition-all duration-300 hover:scale-105;
+  }
+
+  .pricing-card {
+    @apply glass-card transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20;
   }
 }

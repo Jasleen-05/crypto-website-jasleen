@@ -12,28 +12,32 @@ const Testimonials = () => {
       role: "Crypto Investor",
       content: "Lunexa's AI has consistently outperformed my manual trading. The automation is seamless and the insights are incredibly valuable.",
       result: "+347% ROI in 6 months",
-      rating: 5
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       name: "Marcus Rodriguez",
       role: "DeFi Trader",  
       content: "The risk management features are outstanding. I can sleep peacefully knowing my portfolio is being monitored 24/7.",
       result: "+156% Portfolio Growth",
-      rating: 5
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       name: "Emily Watson",
       role: "Financial Advisor",
       content: "I recommend Lunexa to all my clients. The AI's analysis is sophisticated yet easy to understand.",
       result: "+289% Average Client Returns", 
-      rating: 5
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
       name: "David Kim",
       role: "Tech Entrepreneur",
       content: "Finally, a crypto trading platform that actually works. The AI predictions are remarkably accurate.",
       result: "+412% Trading Profits",
-      rating: 5
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     }
   ];
 
@@ -83,7 +87,14 @@ const Testimonials = () => {
             >
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="glass-card p-8 md:p-12 text-center max-w-4xl mx-auto">
+                  <div className="testimonial-card p-8 md:p-12 text-center max-w-4xl mx-auto">
+                    <div className="flex justify-center mb-6">
+                      <img 
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        className="w-16 h-16 rounded-full object-cover border-2 border-violet-400/20"
+                      />
+                    </div>
                     <div className="flex justify-center mb-6">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} size={24} weight="fill" className="text-yellow-400" />

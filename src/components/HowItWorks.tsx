@@ -1,6 +1,5 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Wallet, Robot, ChartLine } from 'phosphor-react';
 
 const HowItWorks = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -26,22 +25,19 @@ const HowItWorks = () => {
 
   const steps = [
     {
-      icon: Wallet,
       title: "Connect Your Wallet",
       description: "Securely link your crypto wallet with our platform using industry-standard encryption protocols.",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      image: "/lovable-uploads/43933950-1da1-4faf-85c9-1fd14d6471ce.png"
     },
     {
-      icon: Robot,
       title: "Set Up Your AI Assistant", 
       description: "Configure your trading preferences and risk tolerance. Our AI learns your style and optimizes accordingly.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      image: "/lovable-uploads/09c12be2-948d-420f-8258-f27e338edfcc.png"
     },
     {
-      icon: ChartLine,
       title: "Automate Your Trading",
       description: "Sit back and watch as our AI executes profitable trades 24/7, continuously learning and improving.",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      image: "/lovable-uploads/394bef3c-d14f-43c3-99e0-4c03d6b19a1f.png"
     }
   ];
 
@@ -64,15 +60,12 @@ const HowItWorks = () => {
               className="glass-card p-8 text-center group hover:bg-white/10 transition-all duration-300"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="relative mb-8">
+              <div className="relative mb-8 flex justify-center">
                 <img 
                   src={step.image}
                   alt={step.title}
-                  className="w-full h-48 object-cover rounded-xl mb-6"
+                  className="w-32 h-32 object-contain"
                 />
-                <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-violet-600 to-blue-600 rounded-full flex items-center justify-center">
-                  <step.icon size={24} weight="light" className="text-white" />
-                </div>
               </div>
               
               <h3 className="text-2xl font-light text-white mb-4 tracking-tight">
