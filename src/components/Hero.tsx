@@ -26,15 +26,17 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 lg:px-8 pt-16 relative overflow-hidden">
-      {/* Spline 3D Background */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      {/* Spline 3D Background - Larger and positioned at top */}
+      <div className="absolute top-0 left-0 w-full h-[120vh] z-0">
         <iframe 
           src='https://my.spline.design/worldplanet-IHap3E7gvazFJPB4uSQld6lc/' 
           frameBorder='0' 
           width='100%' 
           height='100%'
-          className="w-full h-full"
+          className="w-full h-full scale-110"
         />
+        {/* Dark overlay for blackish effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 pointer-events-none"></div>
       </div>
 
       {/* Content */}
@@ -58,7 +60,7 @@ const Hero = () => {
       </div>
 
       {/* Product Mockup */}
-      <div className="mt-20 w-full max-w-6xl mx-auto scroll-reveal relative z-10">
+      <div className="mt-20 w-full max-w-6xl mx-auto scroll-reveal relative z-20">
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-blue-600/20 blur-3xl"></div>
           <div className="relative glass-card p-4 md:p-8">
