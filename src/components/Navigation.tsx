@@ -45,7 +45,7 @@ const Navigation = () => {
               <img 
                 src="/lovable-uploads/0e93fcb8-c243-4914-b916-6bcffb52317d.png" 
                 alt="Lunexa" 
-                className="h-20 w-auto"
+                className="h-30 w-auto"
               />
             </div>
             
